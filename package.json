@@ -1,0 +1,39 @@
+{
+    "name": "mvc-standard-template",
+    "version": "1.0.0",
+    "description": "This template program is a standard program with an MVC architecture inspired by the framework structure used by Django (Python).",
+    "main": "app.js",
+    "author": "Dimas Aulia Fachrudin",
+    "license": "MIT",
+    "dependencies": {
+        "@prisma/client": "^4.4.0",
+        "@supercharge/strings": "^1.28.0",
+        "bcrypt": "^5.0.1",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "crypto-js": "^4.1.1",
+        "express": "^4.18.1",
+        "express-validator": "^6.14.2",
+        "jsonwebtoken": "^8.5.1",
+        "nodemailer": "^6.8.0"
+    },
+    "devDependencies": {
+        "dotenv": "^16.0.2",
+        "nodemon": "^2.0.20",
+        "prisma": "^4.4.0"
+    },
+    "prisma": {
+        "seed": "node prisma/seed.js"
+    },
+    "scripts": {
+        "dev": "nodemon app.js",
+        "start": "node app.js",
+        "db:init": "yarn prisma init",
+        "db:migrate": "yarn prisma migrate dev",
+        "db:deploy": "yarn prisma migrate deploy",
+        "db:generate": "yarn prisma generate",
+        "db:studio": "yarn prisma studio",
+        "db:reset": "yarn prisma migrate reset",
+        "db:seed": "yarn prisma db seed"
+    }
+}

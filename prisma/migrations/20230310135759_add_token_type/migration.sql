@@ -1,0 +1,5 @@
+-- CreateEnum
+CREATE TYPE "TOKEN_TYPE" AS ENUM ('RESET_TOKEN', 'VERIFICATION_TOKEN');
+
+-- AlterTable
+ALTER TABLE "User" ADD COLUMN     "tokenType" "TOKEN_TYPE";
