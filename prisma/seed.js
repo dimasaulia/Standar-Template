@@ -1,4 +1,4 @@
-const prisma = require("../prisma/client");
+const prisma = require("./client");
 async function main() {}
 
 main()
